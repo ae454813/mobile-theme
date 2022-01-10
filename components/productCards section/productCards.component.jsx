@@ -1,4 +1,4 @@
-import { HeartOutlined } from "@ant-design/icons/lib/icons";
+import { HeartFilled, HeartOutlined } from "@ant-design/icons/lib/icons";
 import {
   Button,
   Card,
@@ -10,21 +10,21 @@ import {
   Space,
   Typography,
 } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { CardsContainer, CardSlider } from "./productCards.styles";
 
 const { Text } = Typography;
-const { Meta } = Card;
 
-const ProductsComponent = ({ cardsData }) => {
+const ProductsComponent = ({ cardsData, textColor, title, viewAll }) => {
+  // const [changeIcon, setChangeIcon] = useState(true)
   return (
-    <CardsContainer>
+    <CardsContainer textColor={textColor}>
       <Row justify="space-between">
         <Col>
-          <Text className="section-title">New</Text>
+          <Text className="section-title">{title}</Text>
         </Col>
         <Col>
-          <Text className="view-all">View all</Text>
+          <Text className="view-all">{viewAll}</Text>
         </Col>
       </Row>
       <CardSlider>
@@ -37,6 +37,7 @@ const ProductsComponent = ({ cardsData }) => {
               }}
               bodyStyle={{
                 padding: "12px",
+                textAlign: "start"
               }}
             >
               <Image
@@ -48,7 +49,14 @@ const ProductsComponent = ({ cardsData }) => {
               />
               <Row justify="space-between" align="middle">
                 <Rate allowHalf defaultValue={5} style={{ fontSize: "12px" }} />
-                <HeartOutlined className="heart-icon" />
+                <div className="heart-icon" >
+                <HeartOutlined/>
+                  {/* {
+                    changeIcon ? <HeartOutlined/>
+                    : <HeartFilled />
+                  } */}
+                
+                </div>
               </Row>
               <Space direction="vertical" size={5}>
                 <Text className="card-title">{card.title}</Text>

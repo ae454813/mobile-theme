@@ -1,4 +1,4 @@
-import { Card, Carousel, Col, Row, Space, Typography } from "antd";
+import { Card, Carousel, Col, Image, Row, Space, Typography } from "antd";
 import React from "react";
 import { BlogContainer } from "./blog.styles";
 
@@ -12,24 +12,28 @@ const BlogCardsComponent = ({ blogData }) => {
           <Text className="section-title">Blog</Text>
         </Col>
       </Row>
-      <Carousel dots={false} slidesToShow={2.01} centerPadding="9px">
+      <Carousel dots={false} slidesToShow={2} centerPadding="9px">
         {blogData.map((blg) => (
           <Space key={blg.id} size={9}>
             <Card
-              bodyStyle={{padding: "8px 0 0 0"}}
+              bodyStyle={{padding: "8px 0 0 0", textAlign: "start"}}
               style={{ width: 167 }}
               cover={
-                <img
+                <Image
+                  preview={false}
                   alt={blg.title}
                   src={blg.imgUrl}
                 />
               }
             >
-              <Space direction="vertical" size={0}>
+              <Space direction="vertical" size={0} style={{width: "100%"}}>
                 <Text className="blog-date" >{blg.date}</Text>
+                <Row justify="space-between">
                 <Text className="blog-description">
-                  {blg.title}
+                  {blg.title} 
                 </Text>
+                {blg.arrow}
+                </Row>
                 <Text className="blog-aurthor" >
                   {blg.aurthor}
                 </Text>

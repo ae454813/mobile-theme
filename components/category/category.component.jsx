@@ -5,19 +5,19 @@ import {  CategorySlider } from './category.styles'
 
 const { Text } = Typography;
 
-const CategoryComponent = ({ categoryData, shape }) => {
+const CategoryComponent = ({ categoryData, shape, textColor, title, viewAll }) => {
     return (
-        <CardsContainer>
+        <CardsContainer textColor={textColor}>
             <Row justify='space-between'>
-                <Col><Text className='section-title'>Categories</Text></Col>
-                <Col><Text className='view-all'>View all</Text></Col>
+                <Col><Text className='section-title'>{title}</Text></Col>
+                <Col><Text className='view-all'>{viewAll}</Text></Col>
             </Row>
             <CategorySlider>
-            <Carousel slidesToShow={4.1} centerPadding='24px'>
+            <Carousel slidesToShow={4.01} dots={false} centerPadding='24px'>
                 {categoryData.map( (cat)=> 
                 <Space key={cat.id} className='cat-item'>
-                    <Image preview={false} width={64} src={cat.imagUrl} alt={cat.title} />
-                    <Text> {cat.title.toUpperCase()} </Text>
+                    <Image preview={false} width={64} src={cat.imagUrl} alt={cat.title} className={(shape == "circle") ? 'circle-img' : null} />
+                    <Text className='cat-title'> {cat.title} </Text>
                 </Space>
                 )}
             </Carousel>

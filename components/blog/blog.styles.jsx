@@ -20,6 +20,7 @@ export const BlogContainer = styled.div`
         font-size: 12px;
         font-weight: 600;
         color: #333333;
+        
     }
 
     .blog-aurthor{
