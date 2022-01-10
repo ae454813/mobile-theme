@@ -26,7 +26,7 @@ const BlogCardsComponent = ({ blogData }) => {
                 />
               }
             >
-              <Space direction="vertical" size={0} style={{width: "100%"}}>
+              <Space direction="vertical" size={0} style={{width: "95%"}, blogData? {marginLeft: "8px"} :null }>
                 <Text className="blog-date" >{blg.date}</Text>
                 <Row justify="space-between">
                 <Text className="blog-description">
