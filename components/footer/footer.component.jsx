@@ -8,14 +8,12 @@ const { Text } = Typography;
 const FooterComponent = ({footerImages ,textColor}) => {
     return (
         <ComponentFooter textColor={textColor}>
-            <Row justify="space-between" align="middle">
+            <Row justify="space-between"  align="middle">
           {footerImages.map((target) => (
-            <Col key={target.id} style={{marginTop: "12px"}}>
-              <Space direction="vertical" size={0}>
-                <Image preview={false} src={target.icon} alt={target.name} />
+              <div key={target.id} className='footer-grid'>
+                <span style={{margin: "auto"}}><Image preview={false} width={24} src={target.icon} alt={target.name} /></span>
                 <Text className="tab-name">{target.name}</Text>
-              </Space>
-            </Col>
+              </div>
           ))}
         </Row>
         </ComponentFooter>

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CardsContainer = styled.div`
-    padding: 0 16px;
     width: 375px;
 
     .section-title{
@@ -16,11 +15,14 @@ export const CardsContainer = styled.div`
         font-weight: 400;
     }
     
+    .header-section{
+        padding: 0 16px;
+    }
 `;
 
 export const CardSlider = styled.section`
     margin-top: 8px;
-
+    padding-left: 16px;
     .card-title{
         color: ${(props) => props.theme.colors.Gray7};
         font-size: 12px;
@@ -56,7 +58,7 @@ export const CardSlider = styled.section`
 
 export const CustomCardSlider = styled.section`
     margin-top: 8px;
-
+    padding-left: 16px;
     .card-title{
         font-size: 12px;
         font-weight: 600;
@@ -90,10 +92,10 @@ export const CustomCardSlider = styled.section`
         border-radius: 4px;
     }
 
-  /* .slick-slide {
-    margin: 0 27px;
+   /* .slick-slide {
+    margin: 0 12px;
   } 
    .slick-list {
     margin: 0 -27px;
-  } */
+  }  */
 `

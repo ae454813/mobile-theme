@@ -19,7 +19,7 @@ const ProductsComponent = ({ cardsData, textColor, title, viewAll }) => {
   // const [changeIcon, setChangeIcon] = useState(true)
   return (
     <CardsContainer textColor={textColor}>
-      <Row justify="space-between">
+      <Row justify="space-between" className='header-section'>
         <Col>
           <Text className="section-title">{title}</Text>
         </Col>
@@ -28,7 +28,7 @@ const ProductsComponent = ({ cardsData, textColor, title, viewAll }) => {
         </Col>
       </Row>
       <CardSlider>
-        <Carousel dots={false} slidesToShow={2.01} centerPadding="12px">
+        <Carousel dots={false} slidesToShow={2.01}  centerPadding="12px">
           {cardsData.map((card) => (
               <Space key={card.id} size={12}>
             <Card

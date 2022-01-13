@@ -17,7 +17,7 @@ const { Text } = Typography;
 const CustomCardsComponent = ({ cardsData, textColor, title, viewAll }) => {
   return (
     <CardsContainer textColor={textColor}>
-      <Row justify="space-between">
+      <Row justify="space-between" className='header-section'>
         <Col>
           <Text className="section-title">{title}</Text>
         </Col>

@@ -8,12 +8,12 @@ const { Text } = Typography;
 const CategoryComponent = ({ categoryData, shape, textColor, title, viewAll }) => {
     return (
         <CardsContainer textColor={textColor}>
-            <Row justify='space-between'>
+            <Row justify='space-between' className='header-section'>
                 <Col><Text className='section-title'>{title}</Text></Col>
                 <Col><Text className='view-all'>{viewAll}</Text></Col>
             </Row>
             <CategorySlider>
-            <Carousel slidesToShow={4.01} dots={false} centerPadding='24px'>
+            <Carousel slidesToShow={4} dots={false} variableWidth={true} centerPadding='24px'>
                 {categoryData.map( (cat)=> 
                 <Space key={cat.id} className='cat-item'>
                     <Image preview={false} width={64} src={cat.imagUrl} alt={cat.title} className={(shape == "circle") ? 'circle-img' : null} />

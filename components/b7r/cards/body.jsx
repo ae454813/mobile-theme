@@ -5,11 +5,7 @@ import FooterComponent from "../../footer/footer.component";
 import HeaderComponent from "../../header/header.component";
 import HeroSliderComponent from "../../hero slider/heroSlider.component";
 import ProductsComponent from "../../productCards section/productCards.component";
-import {
-  BhrMobileContainer,
-  CarsoulContainer,
-  ComponentFooter,
-} from "../b7r.styles";
+import { BhrMobileContainer } from "../b7r.styles";
 
 const { Text } = Typography;
 
@@ -186,17 +182,15 @@ const blogData = [
 ];
 
 const heroImage = [
-    {
-        id: 1,
-        src:"/static/carsoul.svg"
-    },
-    {
-        id: 2,
-        src:"/static/carsoul.svg"
-    },
-    
-]
-
+  {
+    id: 1,
+    src: "/static/carsoul.svg",
+  },
+  {
+    id: 2,
+    src: "/static/carsoul.svg",
+  },
+];
 
 const ComponentBody = () => {
   return (
@@ -204,16 +198,29 @@ const ComponentBody = () => {
       <HeaderComponent headerImages={headerImages} />
       <Row gutter={[0, 24]}>
         <Col span={24}>
-          <HeroSliderComponent heroImage={heroImage} mode="passive"/>
+          <HeroSliderComponent heroImage={heroImage} mode="passive" />
         </Col>
         <Col>
-          <CategoryComponent categoryData={categoryData} shape="square" title="Categories" viewAll="View all"/>
+          <CategoryComponent
+            categoryData={categoryData}
+            shape="square"
+            title="Categories"
+            viewAll="View all"
+          />
         </Col>
         <Col>
-          <ProductsComponent cardsData={cardsData1} title="New" viewAll="View all" />
+          <ProductsComponent
+            cardsData={cardsData1}
+            title="New"
+            viewAll="View all"
+          />
         </Col>
         <Col>
-          <ProductsComponent cardsData={cardsData2} title="New" viewAll="View all" />
+          <ProductsComponent
+            cardsData={cardsData2}
+            title="New"
+            viewAll="View all"
+          />
         </Col>
         <Col>
           <BlogCardsComponent blogData={blogData} />
@@ -227,7 +234,7 @@ const ComponentBody = () => {
               width={343}
             />
           </Col>
-          <Col>
+          <Col style={{paddingBottom: 0}}>
             <Image
               preview={false}
               src="/static/offer1.svg"
@@ -236,8 +243,9 @@ const ComponentBody = () => {
             />
           </Col>
         </Space>
+        <Col style={{padding: 0}}><FooterComponent footerImages={footerImages} /></Col>
       </Row>
-      <FooterComponent footerImages={footerImages} />
+      
     </BhrMobileContainer>
   );
 };

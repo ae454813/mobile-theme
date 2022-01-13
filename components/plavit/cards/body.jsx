@@ -152,7 +152,7 @@ const ComponentBody = () => {
           <Col><CustomCardsComponent cardsData={cardsData} project="plavit" textColor="#3F6B51" title="For you" viewAll="View all"/></Col>
           <Col><BlogCardsComponent blogData={blogData} textColor="#3F6B51"/></Col>
           <Col><CustomCardsComponent cardsData={cardsData} project="plavit" textColor="#3F6B51" title="New" viewAll="View all"/></Col>
-          <Col><FooterComponent footerImages={footerImages} textColor="#3F6B51" /></Col>
+          <Col style={{padding: 0}}><FooterComponent footerImages={footerImages} textColor="#3F6B51" /></Col>
         </Row>
           </PlavitContainer>
       );

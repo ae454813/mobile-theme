@@ -4,10 +4,10 @@ import { BlogContainer } from "./blog.styles";
 
 const { Text } = Typography;
 
-const BlogCardsComponent = ({ blogData }) => {
+const BlogCardsComponent = ({ blogData, textColor }) => {
   return (
-    <BlogContainer>
-      <Row justify="space-between" style={{marginBottom: "8px"}}>
+    <BlogContainer textColor={textColor}>
+      <Row justify="space-between" style={{marginBottom: "8px"}} >
         <Col>
           <Text className="section-title">Blog</Text>
         </Col>
@@ -17,7 +17,7 @@ const BlogCardsComponent = ({ blogData }) => {
           <Space key={blg.id} size={9}>
             <Card
               bodyStyle={{padding: "8px 0 0 0", textAlign: "start"}}
-              style={{ width: 167 }}
+              style={{ width: 167 ,border: "none" }}
               cover={
                 <Image
                   preview={false}
@@ -26,7 +26,7 @@ const BlogCardsComponent = ({ blogData }) => {
                 />
               }
             >
-              <Space direction="vertical" size={0} style={{width: "95%"}, blogData? {marginLeft: "8px"} :null }>
+              <Space direction="vertical" size={0} style={blogData? {marginLeft: "8px"} :null ,{width: "100%"} }>
                 <Text className="blog-date" >{blg.date}</Text>
                 <Row justify="space-between">
                 <Text className="blog-description">

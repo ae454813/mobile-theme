@@ -7,7 +7,7 @@ export const BlogContainer = styled.div`
     .section-title{
         font-weight: 600;
         font-size: 16px;
-        color: #406C9A;
+        color: ${(props) => props.textColor || props.theme.colors.NavyBlack};
     }
 
     .blog-date{
@@ -27,4 +27,12 @@ export const BlogContainer = styled.div`
         font-size: 8px;
         color: ${(props) => props.theme.customColors.dark};
     }
+
+    /* .slick-slide{
+        margin: 0 8px;
+    }
+    .slick-list {
+        max-height: 271px;
+    } */
+
 `;
