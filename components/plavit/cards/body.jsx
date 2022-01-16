@@ -116,7 +116,7 @@ const blogData = [
       imgUrl: "/static/plavit/farming1.svg",
       date: "10 jan 2020",
       title: "Farming Plants",
-      arrow: <RightOutlined style={{color: "#3F6B51" ,fontSize: "18px"}} />,
+      arrow: <RightOutlined style={{color: "#3F6B51" ,fontSize: "12px"}} />,
       aurthor: "by: marget roby",
     },
     {
@@ -124,7 +124,7 @@ const blogData = [
       imgUrl: "/static/plavit/farming2.svg",
       date: "10 jan 2020",
       title: "Farming Plants",
-      arrow: <RightOutlined style={{color: "#3F6B51" ,fontSize: "18px"}} />,
+      arrow: <RightOutlined style={{color: "#3F6B51" ,fontSize: "12px"}} />,
       aurthor: "by: marget roby",
     },
     {
@@ -132,7 +132,7 @@ const blogData = [
       imgUrl: "/static/plavit/farming1.svg",
       date: "10 jan 2020",
       title: "Farming Plants",
-      arrow: <RightOutlined style={{color: "#3F6B51" ,fontSize: "18px"}} />,
+      arrow: <RightOutlined style={{color: "#3F6B51" ,fontSize: "12px"}} />,
       aurthor: "by: marget roby",
     },
   ];

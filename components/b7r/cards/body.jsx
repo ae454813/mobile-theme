@@ -186,10 +186,14 @@ const heroImage = [
     id: 1,
     src: "/static/carsoul.svg",
   },
-  {
-    id: 2,
-    src: "/static/carsoul.svg",
-  },
+  // {
+  //   id: 2,
+  //   src: "/static/1 2.png",
+  // },
+  // {
+  //   id: 3,
+  //   src: "/static/22.png",
+  // },
 ];
 
 const ComponentBody = () => {

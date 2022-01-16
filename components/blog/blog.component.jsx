@@ -16,8 +16,9 @@ const BlogCardsComponent = ({ blogData, textColor }) => {
         {blogData.map((blg) => (
           <Space key={blg.id} size={9}>
             <Card
-              bodyStyle={{padding: "8px 0 0 0", textAlign: "start"}}
+              bodyStyle={{padding:  blg.arrow? "0" : "8px 0 0 0", textAlign: "start", backgroundColor: blg.arrow? "#E5F0EA": "unset"}}
               style={{ width: 167 ,border: "none" }}
+              bordered={false}
               cover={
                 <Image
                   preview={false}
@@ -26,7 +27,7 @@ const BlogCardsComponent = ({ blogData, textColor }) => {
                 />
               }
             >
-              <Space direction="vertical" size={0} style={blogData? {marginLeft: "8px"} :null ,{width: "100%"} }>
+              <Space direction="vertical" size={0} style={blogData? {marginLeft: "8px"} :null ,{width: "95%"} }>
                 <Text className="blog-date" >{blg.date}</Text>
                 <Row justify="space-between">
                 <Text className="blog-description">

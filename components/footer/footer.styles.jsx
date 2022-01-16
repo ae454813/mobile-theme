@@ -19,8 +19,7 @@ export const ComponentFooter = styled.footer`
     .footer-grid{
         display: flex;
         margin: auto;
-        max-height: 40px;
-        
+        min-height: 40px;
         flex-direction: column;
         
         text-align: center;

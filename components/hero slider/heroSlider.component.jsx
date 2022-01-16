@@ -4,11 +4,11 @@ import { CarsoulContainer } from './heroSlider.styles'
 
 const HeroSliderComponent = ({ heroImage, mode }) => {
     return (
-        <CarsoulContainer mode={mode}>
+        <CarsoulContainer  mode={mode}>
             {
                 mode == "passive" ? 
 
-            (<Carousel dots={false}>
+            (<Carousel slidesToShow={1} dots={false}>
                 {
                     heroImage.map( (item)=> <Image key={item.id} preview={false} src={item.src} alt="man" /> )
                 }

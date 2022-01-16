@@ -32,6 +32,7 @@ const CustomCardsComponent = ({ cardsData, textColor, title, viewAll }) => {
               <Card
                 key={card.id}
                 style={{ width: "163px" }}
+                bordered={false}
                 bodyStyle={{
                   padding: "16px 10px 20px",
                 }}
